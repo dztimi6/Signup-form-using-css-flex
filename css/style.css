@@ -1,0 +1,248 @@
+:root {
+  /* Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+
+  /* Accent */
+  --blue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: hsl(228, 56%, 98%);
+
+  /* Font */
+  --ff: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/bg-intro-desktop.png");
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--ff);
+  color: var(--white);
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem;
+  padding-inline: 3rem;
+}
+
+.write-up {
+  line-height: 1.2;
+  font-size: 1rem;
+  width: 50%;
+}
+
+.write-up h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+/* .form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+} */
+
+.form {
+  /* max-width: 40rem; */
+  background-color: var(--white);
+  background: linear-gradient(
+    0deg,
+    rgb(255, 255, 255) 0%,
+    rgb(244, 247, 251) 100%
+  );
+  border-radius: 0.5rem;
+  padding: 25px;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 18px 0px rgba(15, 1, 15, 0.47);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(15, 1, 15, 0.47);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(15, 1, 15, 0.47);
+}
+
+.trial {
+  background-color: var(--blue);
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.7rem;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  padding-block: 0.938rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.trial .span {
+  font-weight: 700;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.input-container .input {
+  width: 100%;
+  position: relative;
+  background: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 1px 6px 6px 2px rgba(169, 207, 207, 0.52);
+  -webkit-box-shadow: 1px 6px 6px 2px rgba(169, 207, 207, 0.52);
+  -moz-box-shadow: 1px 6px 6px 2px rgba(169, 207, 207, 0.52);
+  border-inline: 2px solid transparent;
+}
+
+.input {
+  width: auto;
+  height: 50px;
+}
+
+.form .input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.bx {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(50%);
+  visibility: hidden;
+}
+.input-label {
+  font-size: 10px;
+  color: var(--red);
+  font-weight: 600;
+  font-style: italic;
+  float: right;
+  visibility: hidden;
+}
+
+.form .input:focus {
+  outline: none;
+  border: 2px solid rgb(170, 170, 170);
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: var(--green);
+  color: var(--white);
+  padding-block: 15px;
+  margin: 20px auto 15px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form .login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.agreement {
+  display: block;
+  text-align: center;
+  font-size: 0.5rem;
+  color: rgb(170, 170, 170);
+}
+
+.agreement a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.input-container .b-color {
+  border: 1px solid var(--red);
+}
+
+@media (max-width: 33rem) {
+  .container {
+    width: min(95%, 70rem);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 1rem;
+    padding-inline: 1rem;
+    line-height: 1.5;
+  }
+
+  .write-up {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .write-up h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .trial {
+    font-size: 1rem;
+    padding: 20px 3rem;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .form .input {
+    margin: 12px auto;
+    height: 60px;
+  }
+
+  .form .input::placeholder {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0.25em;
+  }
+
+  .bx {
+    top: 30%;
+    right: 20px;
+    top: 40%;
+    transform: translateY(50%);
+  }
+
+  .agreement {
+    font-size: 0.8rem;
+    padding: 0 2rem 0 2rem;
+  }
+}
